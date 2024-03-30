@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crear Cuenta</title>
+    <!-- Estilos CSS -->
+    <style>
+        body {
+            background-image: url('../Resource/fondo.jpg');
+            background-color: #f9f9f9;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .register-container {
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            width: 320px;
+        }
+
+        .register-container h2 {
+            text-align: center;
+            color: #333333;
+        }
+
+        .register-container input {
+            width: 100%;
+            margin-bottom: 20px;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #cccccc;
+        }
+
+        .register-container button {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #007bff;
+            color: #ffffff;
+            cursor: pointer;
+        }
+
+        .register-container button:hover {
+            background-color: #0056b3;
+        }
+
+        .register-container a {
+            display: block;
+            text-align: center;
+            color: #007bff;
+            text-decoration: none;
+            margin-top: 10px;
+        }
+
+        .register-container a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="register-container">
+        <h2>Crear Cuenta</h2>
+        <input type="text" placeholder="Nombre" required>
+        <input type="text" placeholder="Apellido" required>
+        <input type="email" placeholder="Correo electrónico" required>
+        <input type="password" placeholder="Contraseña" required>
+
+        <button type="button" onclick="register()">Crear Cuenta</button>
+        <a href="../index.html">Volver a Iniciar Sesión</a>
+    </div>
+
+    <script>
+        function register() {
+            const nombreInput = document.querySelector('input[type="text"][placeholder="Nombre"]');
+            const apellidoInput = document.querySelector('input[type="text"][placeholder="Apellido"]');
+            const emailInput = document.querySelector('input[type="email"][placeholder="Correo electrónico"]');
+            const contraseñaInput = document.querySelector('input[type="password"][placeholder="Contraseña"]');
+
+            if (nombreInput.value.trim() === '' || apellidoInput.value.trim() === '' || emailInput.value.trim() === '' || contraseñaInput.value.trim() === '') {
+                alert('Por favor, complete todos los campos.');
+                return;
+            }
+
+            // Aquí puedes agregar la lógica para enviar los datos de registro.
+            alert('Registro exitoso.');
+        }
+    </script>
+</body>
+
+</html>

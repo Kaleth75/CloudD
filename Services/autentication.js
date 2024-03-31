@@ -1,6 +1,7 @@
-import { login_auth } from "./global.js";
+import { login_auth, signInWithGoogle } from "./global.js";
 
 const evento = document.getElementById("login_btn");
+const loginGoogle = document.getElementById("googleLogin");
 
 export async function validar() {
     const email = document.getElementById('usuario').value;
@@ -29,6 +30,6 @@ export async function validar() {
 
 window.addEventListener('DOMContentLoaded', () => {
     evento.addEventListener('click', validar);
-  
+    loginGoogle.addEventListener('click', signInWithGoogle);
 });
 

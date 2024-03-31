@@ -2,7 +2,7 @@ import { login_auth } from "./global.js";
 
 const evento = document.getElementById("login_btn");
 
-async function validar() {
+export async function validar() {
     const email = document.getElementById('usuario').value;
     const password = document.getElementById('password').value;
 
@@ -29,4 +29,6 @@ async function validar() {
 
 window.addEventListener('DOMContentLoaded', () => {
     evento.addEventListener('click', validar);
+  
 });
+

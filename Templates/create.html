@@ -4,17 +4,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/Resource/mac.png">
+
     <title>Crear Cuenta</title>
     <!-- Estilos CSS -->
     <style>
         body {
             background-image: url('../Resource/fondo.jpg');
-            background-color: #f9f9f9;
-            font-family: Arial, sans-serif;
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
+            position: relative;
             margin: 0;
         }
 
@@ -44,19 +47,19 @@
             padding: 10px;
             border: none;
             border-radius: 5px;
-            background-color: #007bff;
+            background-color: #148600;
             color: #ffffff;
             cursor: pointer;
         }
 
         .register-container button:hover {
-            background-color: #0056b3;
+            background-color: #148600;
         }
 
         .register-container a {
             display: block;
             text-align: center;
-            color: #007bff;
+            color: #114e06;
             text-decoration: none;
             margin-top: 10px;
         }
@@ -72,18 +75,18 @@
         <h2>Crear Cuenta</h2>
         <input type="text" placeholder="Nombre" required>
         <input type="text" placeholder="Apellido" required>
-        <input type="email" placeholder="Correo electrónico" required>
-        <input type="password" placeholder="Contraseña" required>
+        <input type="email" placeholder="Correo electrónico"  id ="edemail" required>
+        <input type="password" placeholder="Contraseña" id ="edpass"required>
 
-        <button type="button" onclick="register()">Crear Cuenta</button>
-        <a href="../index.html">Volver a Iniciar Sesión</a>
+        <button type="button" id="agregar" onclick="register()">Crear Cuenta</button>
+        <a href="../index.html">Back to Login
     </div>
-
+<script type="module" src="/Services/user_register.js"></script>
     <script>
         function register() {
             const nombreInput = document.querySelector('input[type="text"][placeholder="Nombre"]');
             const apellidoInput = document.querySelector('input[type="text"][placeholder="Apellido"]');
-            const emailInput = document.querySelector('input[type="email"][placeholder="Correo electrónico"]');
+            const emailInput = document.querySelector('input[type="email"][placeholder="Correo electrónico"]') ;
             const contraseñaInput = document.querySelector('input[type="password"][placeholder="Contraseña"]');
 
             if (nombreInput.value.trim() === '' || apellidoInput.value.trim() === '' || emailInput.value.trim() === '' || contraseñaInput.value.trim() === '') {
@@ -91,8 +94,6 @@
                 return;
             }
 
-            // Aquí puedes agregar la lógica para enviar los datos de registro.
-            alert('Registro exitoso.');
         }
     </script>
 </body>

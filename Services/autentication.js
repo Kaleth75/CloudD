@@ -1,7 +1,8 @@
-import { login_auth, signInWithGoogle } from "./global.js";
+import { login_auth, signInWithFace, signInWithGoogle } from "./global.js";
 
 const evento = document.getElementById("login_btn");
 const loginGoogle = document.getElementById("googleLogin");
+const loginWithFacebook = document.getElementById("faceLogin");
 
 export async function validar() {
     const email = document.getElementById('usuario').value;
@@ -31,5 +32,6 @@ export async function validar() {
 window.addEventListener('DOMContentLoaded', () => {
     evento.addEventListener('click', validar);
     loginGoogle.addEventListener('click', signInWithGoogle);
+    loginWithFacebook.addEventListener('click', signInWithFace);
 });
 

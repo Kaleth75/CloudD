@@ -2,13 +2,14 @@ import { User_Register,everification } from "../Services/global.js"
 const agregar = document.getElementById('agregar' )
 async function registrar (){
 
-    const usuario = document.getElementById('edemail').value
-    const contraseña = document.getElementById('edpass').value
+    const usuario = document.getElementById('email').value
+    const contraseña = document.getElementById('contrasena').value
 
     const verificar = User_Register (usuario,contraseña)
     const validar = await verificar
 
 if(validar != null){
+
     everification()
     alert(' Register Successfull' + usuario)
     window.location.href='create.html' 

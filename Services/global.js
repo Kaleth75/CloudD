@@ -16,6 +16,14 @@
         FacebookAuthProvider
     } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-auth.js";
 
+    import {
+        getFirestore,
+        collection, 
+        addDoc,
+        
+     } from 'https://www.gstatic.com/firebasejs/10.8.1/firebase-firestore.js'
+
+
     const firebaseConfig = {
         apiKey: "AIzaSyBhuV5J_pmewh3nwXHfC_nYV495-WqUpnE",
         authDomain: "desam-9d678.firebaseapp.com",
@@ -45,6 +53,7 @@
     const app = initializeApp(firebaseConfig);
     const analytics = getAnalytics(app);
     const auth = getAuth(app);
+    const db = getFirestore(app);
 
     const provider = new GoogleAuthProvider();
 
@@ -91,3 +100,12 @@
             }
         });
     }
+
+    //Servicios de firestore
+
+export const AddData=(first,last,born)=>
+    addDoc(collection(db, "users") ,{
+        first,
+        last,
+        born
+    });

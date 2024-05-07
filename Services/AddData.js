@@ -12,7 +12,7 @@ async function register (){
     const email = document.getElementById('email').value;
     const contraseña = document.getElementById('contrasena').value;
     
-    const verificar = AddData (name,apellido,fechaNacimiento,telefono,email,direccion,contraseña)
+    const verificar = await AddData (name,apellido,fechaNacimiento,telefono,email,direccion,contraseña)
     const validar = await verificar
 
     if(validar != null){

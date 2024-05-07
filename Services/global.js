@@ -103,9 +103,15 @@
 
     //Servicios de firestore
 
-export const AddData=(first,last,born)=>
-    addDoc(collection(db, "users") ,{
-        first,
+export const AddData=async (Cedula,First,last,born,Direccion,Celular,Email,Passs)=>
+    await  addDoc(collection(db, "users") ,{
+        Cedula,
+        First,
         last,
-        born
+        born,
+        Direccion,
+        Celular,
+        
+        
+
     });

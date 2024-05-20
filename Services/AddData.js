@@ -11,9 +11,8 @@ async function register (){
     const telefono = document.getElementById('telefono').value;
     const email = document.getElementById('email').value;
     const contraseña = document.getElementById('contrasena').value;
-    const role = document.getElementById('contrasena').value;
-
-    const verificar = await AddData (name,apellido,fechaNacimiento,telefono,email,direccion,contraseña,role)
+    
+    const verificar = await AddData (name,apellido,fechaNacimiento,telefono,email,direccion,contraseña)
     const validar = await verificar
 
     if(validar != null){
@@ -23,7 +22,7 @@ async function register (){
         alert ('Error register no sucessfull' )
         console.log('sesion'+name+' no validation '  )
     }
-        AAA
+    
       
 }
 

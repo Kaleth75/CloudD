@@ -19,7 +19,7 @@ if(validar != null){
     const email = document.getElementById('email').value;
     const contraseña = document.getElementById('contrasena').value;
     
-    await AddData (name,apellido,fechaNacimiento,telefono,email,direccion,contraseña)
+    await AddData (name,apellido,fechaNacimiento,telefono,email,direccion,contraseña,"usuario")
     
 
     if(validar != null){
@@ -34,7 +34,11 @@ if(validar != null){
 }else {
     alert ('Error register no sucessfull' )
     console.log('sesion'+usuario+' no validation '  )
-} }
+} 
+}
+
 window.addEventListener('DOMContentLoaded',async()=>{
     agregar.addEventListener('click',registrar)
 })
+
+

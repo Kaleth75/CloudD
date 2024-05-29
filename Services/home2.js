@@ -5,7 +5,6 @@ userState()
 const cerrar=document.getElementById('logoutBtn')
 const deleteAccountBtn = document.getElementById("DeletetBtn");
 
-
 async function sesion(){
     const validar = logout()
     const verificar = await validar
